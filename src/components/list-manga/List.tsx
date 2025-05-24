@@ -1,14 +1,21 @@
 import { Card, Col, Row } from "antd";
+import { useNavigate } from "react-router";
 
 interface ListProps {
   listManga?: {
     index: number;
     title: string;
     image: string;
+    path: string;
   }[];
 }
 
 export const ListComponent: React.FC<ListProps> = ({ listManga }) => {
+  const navigate = useNavigate();
+  const seeListChapter = (path:string) => {
+    navigate(`/danh-sach-chuong/${path}`);
+  };
+  
   return (
     <Row gutter={[8, 8]}>
       {listManga?.map((manga, index) => (
@@ -17,12 +24,18 @@ export const ListComponent: React.FC<ListProps> = ({ listManga }) => {
             size="small"
             hoverable
             style={{ width: 180, margin: "0 auto" }}
-            cover={
-              <img src={manga.image} alt={manga.title} />
-            }
+            cover={<img src={manga.image} alt={manga.title} />}
+            onClick={() => seeListChapter(manga.path)}
           >
             <div style={{ display: "flex", alignItems: "center" }}>
-              <span onClick={() => {}} style={{ cursor: "pointer", margin: "0 auto", textAlign: "center", display: "block" }}>
+              <span
+                style={{
+                  cursor: "pointer",
+                  margin: "0 auto",
+                  textAlign: "center",
+                  display: "block",
+                }}
+              >
                 {manga.title}
               </span>
             </div>

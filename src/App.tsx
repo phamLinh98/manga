@@ -1,6 +1,6 @@
-import LayoutListComponent from "./components/Layout";
-
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routers/router';
 
 export const App = () => {
-  return <LayoutListComponent />;
+  return <RouterProvider router={router}/>;
 }
