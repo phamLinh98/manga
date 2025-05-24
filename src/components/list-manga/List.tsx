@@ -1,6 +1,6 @@
 import { Card, Col, Row } from "antd";
 import { useNavigate } from "react-router";
-
+import {useShared} from "../ContextData";
 interface ListProps {
   listManga?: {
     index: number;
@@ -12,10 +12,13 @@ interface ListProps {
 
 export const ListComponent: React.FC<ListProps> = ({ listManga }) => {
   const navigate = useNavigate();
-  const seeListChapter = (path:string) => {
+  const { setSharedData } = useShared(); // ✅ Dùng context
+
+  const seeListChapter = (path: string) => {
+    setSharedData(path); // ✅ Lưu path vào context
     navigate(`/danh-sach-chuong/${path}`);
   };
-  
+
   return (
     <Row gutter={[8, 8]}>
       {listManga?.map((manga, index) => (

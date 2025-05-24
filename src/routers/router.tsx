@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import StoryDetail from "../components/list-manga/MangaDetail";
 import { ContentComponent } from "../components/Content";
 import { LayoutListComponent } from "../components/Layout";
+import { MangaComponent } from "../components/list-manga/Manga";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/danh-sach-chuong/:path",
-        element: <StoryDetail />,
+        element: <MangaComponent />,
       },
     ],
   },

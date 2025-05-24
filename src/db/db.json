@@ -1,0 +1,711 @@
+{
+      "list": [
+        {
+          "index": 1,
+          "title": "One Piece",
+          "image": "https://i.pinimg.com/736x/31/61/a0/3161a00b8833bbf5c77e0801722342cc.jpg",
+          "path": "one-piece"
+        },
+        {
+          "index": 2,
+          "title": "Naruto Shippuden",
+          "image": "https://i.pinimg.com/736x/e7/5b/eb/e75bebe5ddc766ee2524eee6c8dc50c0.jpg",
+          "path": "naruto-shippuden"
+        },
+        {
+          "index": 3,
+          "title": "Attack on Titan",
+          "image": "https://i.pinimg.com/736x/4a/03/bd/4a03bd9e55e6fa6e0cacb9b03985259b.jpg",
+          "path": "attack-on-titan"
+        },
+        {
+          "index": 4,
+          "title": "Yugioh",
+          "image": "https://i.pinimg.com/736x/40/97/51/40975117349aef16c5d062c05714a4f1.jpg",
+          "path": "yugioh"
+        },
+        {
+          "index": 5,
+          "title": "Dragon Ball",
+          "image": "https://i.pinimg.com/736x/d5/33/c6/d533c6e88f4e0efa606dfcd05d406491.jpg",
+          "path": "dragon-ball"
+        },
+        {
+          "index": 6,
+          "title": "Conan",
+          "image": "https://i.pinimg.com/736x/4b/09/dc/4b09dc55f42b895505ee1f95f7b0f685.jpg",
+          "path": "conan"
+        },
+        {
+          "index": 7,
+          "title": "Assassination Classroom",
+          "image": "https://i.pinimg.com/736x/fd/0f/e6/fd0fe676765c6e187c8284d089f44a9e.jpg",
+          "path": "assassination-classroom"
+        },
+        {
+          "index": 8,
+          "title": "Kindaichi",
+          "image": "https://i.pinimg.com/736x/fd/1d/43/fd1d4375b2cd6656f97716104a983c7a.jpg",
+          "path": "kindaichi"
+        }
+      ],
+      "chapter": {
+        "one-piece": {
+          "path": "one-piece",
+          "title": "One Piece",
+          "cover": "https://i.pinimg.com/736x/31/61/a0/3161a00b8833bbf5c77e0801722342cc.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        },
+        "naruto-shippuden": {
+          "path": "naruto-shippuden",
+          "title": "Naruto Shippuden",
+          "cover": "https://i.pinimg.com/736x/e7/5b/eb/e75bebe5ddc766ee2524eee6c8dc50c0.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        },
+        "attack-on-titan": {
+          "path": "attack-on-titan",
+          "title": "Attack on Titan",
+          "cover": "https://i.pinimg.com/736x/4a/03/bd/4a03bd9e55e6fa6e0cacb9b03985259b.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        },
+        "yugioh": {
+          "path": "yugioh",
+          "title": "Yugioh",
+          "cover": "https://i.pinimg.com/736x/40/97/51/40975117349aef16c5d062c05714a4f1.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        },
+        "dragon-ball": {
+          "path": "dragon-ball",
+          "title": "Dragon Ball",
+          "cover": "https://i.pinimg.com/736x/d5/33/c6/d533c6e88f4e0efa606dfcd05d406491.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        },
+        "conan": {
+          "path": "conan",
+          "title": "Conan",
+          "cover": "https://i.pinimg.com/736x/4b/09/dc/4b09dc55f42b895505ee1f95f7b0f685.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        },
+        "assassination-classroom": {
+          "path": "assassination-classroom",
+          "title": "Assassination Classroom",
+          "cover": "https://i.pinimg.com/736x/fd/0f/e6/fd0fe676765c6e187c8284d089f44a9e.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        },
+        "kindaichi": {
+          "path": "kindaichi",
+          "title": "Kindaichi",
+          "cover": "https://i.pinimg.com/736x/fd/1d/43/fd1d4375b2cd6656f97716104a983c7a.jpg",
+          "author": "Akira Toriyama",
+          "genres": ["Hành động", "Phiêu lưu", "Hài hước"],
+          "description": "Dragon Ball là một trong những bộ manga/anime nổi tiếng nhất thế giới, kể về cuộc phiêu lưu của Son Goku từ khi còn nhỏ cho đến khi trưởng thành, cùng với những người bạn và kẻ thù của mình. Câu chuyện xoay quanh việc tìm kiếm các viên ngọc rồng để triệu hồi rồng thần và thực hiện những điều ước.",
+          "updatedAt": "2025-05-20",
+          "slug": "vo-than-chua-te",
+          "chapters": [
+            {
+              "id": 1,
+              "number": 1,
+              "title": "Khởi đầu",
+              "date": "2025-01-01",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 2,
+              "number": 2,
+              "title": "Cuộc gặp định mệnh",
+              "date": "2025-01-02",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 3,
+              "number": 3,
+              "title": "Thức tỉnh",
+              "date": "2025-01-03",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 4,
+              "number": 4,
+              "title": "Hành trình bắt đầu",
+              "date": "2025-01-04",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 5,
+              "number": 5,
+              "title": "Đối đầu với kẻ thù",
+              "date": "2025-01-05",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 6,
+              "number": 6,
+              "title": "Khám phá bí mật",
+              "date": "2025-01-06",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 7,
+              "number": 7,
+              "title": "Trận chiến quyết định",
+              "date": "2025-01-07",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 8,
+              "number": 8,
+              "title": "Sự trở lại của anh hùng",
+              "date": "2025-01-08",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 9,
+              "number": 9,
+              "title": "Hòa bình trở lại",
+              "date": "2025-01-09",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            },
+            {
+              "id": 10,
+              "number": 10,
+              "title": "Kết thúc hành trình",
+              "date": "2025-01-10",
+              "image": "https://i.pinimg.com/736x/22/0d/d1/220dd175d616c675422ccfc4a19d4de8.jpg"
+            }
+          ]
+        }
+      }
+    }
+    
