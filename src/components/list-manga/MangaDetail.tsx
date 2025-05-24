@@ -1,5 +1,4 @@
 import { Button } from "antd";
-import { BookOpen, ChevronRight } from "lucide-react";
 import { FaBookOpen, FaEye } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
 
