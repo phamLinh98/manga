@@ -10,7 +10,7 @@ export const ContentComponent:React.FC = () => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
-  const [list, setList] = useState<any[]>([]);
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     const fetchChapters = async () => {
@@ -29,14 +29,14 @@ export const ContentComponent:React.FC = () => {
     fetchChapters();
   }, []);
 
-  if (!list) {
+  if (list.length === 0) {
     return (
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-      <Spin indicator={<LoadingOutlined style={{ fontSize: 60 }} spin />} />
+        <Spin indicator={<LoadingOutlined style={{ fontSize: 60 }} spin />} />
       </div>
     );
   }
-
+  
  //Mock logic
   return (
     <Content style={{ padding: "0 55px" }}>
