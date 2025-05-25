@@ -1,6 +1,7 @@
-import { Button } from "antd";
+import { Button, Spin } from "antd";
 import { FaBookOpen, FaEye } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
+import { LoadingOutlined } from '@ant-design/icons';
 
 interface StoryDetailProps {
   currentChapter: any; // bạn nên định nghĩa type rõ hơn nếu có thể
@@ -8,7 +9,11 @@ interface StoryDetailProps {
 
 const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
   if (!currentChapter) {
-    return <div>Đang tải dữ liệu truyện...</div>;
+    return (
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <Spin indicator={<LoadingOutlined style={{ fontSize: 60 }} spin />} />
+      </div>
+    );
   }
 
   const {
