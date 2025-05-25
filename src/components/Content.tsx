@@ -1,8 +1,9 @@
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Spin } from "antd";
 import { Content } from "antd/es/layout/layout";
 import { ListComponent } from "./list-manga/List";
 import { theme } from 'antd';
 import { useEffect, useState } from "react";
+import { LoadingOutlined } from '@ant-design/icons';
 
 export const ContentComponent:React.FC = () => {
   const {
@@ -27,6 +28,14 @@ export const ContentComponent:React.FC = () => {
 
     fetchChapters();
   }, []);
+
+  if (!list) {
+    return (
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <Spin indicator={<LoadingOutlined style={{ fontSize: 60 }} spin />} />
+      </div>
+    );
+  }
 
  //Mock logic
   return (
