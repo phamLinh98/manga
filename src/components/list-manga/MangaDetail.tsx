@@ -31,7 +31,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
 
   return (
     <div className="max-w-5xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6" style={{ marginTop: "5px" }}>
-      <div className="md:col-span-1" style={{ paddingLeft: "5px", marginLeft: "5px" }}>
+      <div className="md:col-span-1" style={{ paddingLeft: "5px", paddingRight: "5px", marginLeft: "5px", marginRight:"5px" }}>
         <img
           src={cover}
           alt={title}
@@ -62,7 +62,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
           </Button>
         </div>
 
-        <div className="col-span-full mt-8" style={{ paddingLeft: "5px", marginLeft: "5px" }}>
+        <div className="col-span-full mt-8" style={{ paddingLeft: "5px", paddingRight: "5px", marginLeft: "5px", marginRight:"5px" }}>
           <h2 className="text-2xl font-semibold mb-4">Danh sách chương</h2>
           <ul
             className="divide-y divide-gray-200 rounded-xl overflow-hidden space-y-2"
