@@ -18,11 +18,16 @@ export const router = createBrowserRouter([
         element: <ContentComponent />,
       },
       {
-        path: "/danh-sach-chuong/:path",
-        element: <MangaComponent />,
+        path: "/danh-sach-chuong",
+        children: [
+          {
+            path: ":path",
+            element: <MangaComponent />,
+          },
+        ],
       },
       {
-        path:"/chap",
+        path: "truyen/:path/:id",
         element: <MangaChapter />,
       }
     ],

@@ -2,6 +2,7 @@ import { Button, Spin } from "antd";
 import { FaBookOpen, FaEye } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
 import { LoadingOutlined } from '@ant-design/icons';
+import { Navigate, useNavigate } from "react-router";
 
 interface StoryDetailProps {
   currentChapter: any; // bạn nên định nghĩa type rõ hơn nếu có thể
@@ -23,11 +24,15 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
     description,
     cover,
     updatedAt,
-    slug,
     chapters,
+    path
   } = currentChapter;
 
-  console.log(cover);
+  const navigate = useNavigate();
+
+  const moveToChapterById = (id:any, path:any) => {
+    navigate(`/truyen/${path}/${id}`);
+  }
 
   return (
     <div className="max-w-5xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6" style={{ marginTop: "5px" }}>
@@ -74,8 +79,8 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
                 className="p-4 hover:bg-gray-50 transition flex justify-between"
               >
                 <a
-                  href={`/truyen/${slug}/chap-${chap.number}`}
                   className="text-blue-600 font-medium"
+                  onClick={() => moveToChapterById(chap.id, path)}
                 >
                   Chương {chap.number}: {chap.title}
                 </a>
