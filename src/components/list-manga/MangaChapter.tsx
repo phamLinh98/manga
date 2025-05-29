@@ -21,11 +21,11 @@ export default function MangaChapter() {
       {/* Nội dung truyện */}
       <main className="flex-1 overflow-y-auto px-2 py-4 space-y-4 flex justify-center items-center flex-col">
         {images.map((src, index) => (
-          <div key={index} className="w-1/2 h-auto rounded-lg shadow-md mb-1">
+          <div key={index} className="rounded-lg shadow-md mb-1">
             <img
               src={src}
               alt={`Trang ${index + 1}`}
-              className="w-full h-auto rounded-lg"
+              className="rounded-lg"
               loading="lazy"
             />
           </div>
