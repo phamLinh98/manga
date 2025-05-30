@@ -26,7 +26,7 @@ const MangaChapter: React.FC = () => {
 
   const currentChapter = chap?.[path]?.chapters || [];
   if (currentChapter.length > 0) {
-    console.log("currentChapter", currentChapter[0].chapter);
+    console.log("Done");
   } else {
     console.log("No chapters available");
   }
