@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { envConfig } from "../../config/envConfig";
 import { Button, Select, Spin } from "antd";
-import { DownloadOutlined, LoadingOutlined } from "@ant-design/icons";
+import { LoadingOutlined } from "@ant-design/icons";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 const MangaChapter: React.FC = () => {
@@ -47,6 +47,11 @@ const MangaChapter: React.FC = () => {
     fetchChapters();
   }, []);
 
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts or id changes
+    window.scrollTo(0, 0);
+  }, [id]);
+
   const currentChapter = chap?.[path]?.chapters || [];
   if (currentChapter.length > 0) {
     console.log("Done");
@@ -77,13 +82,13 @@ const MangaChapter: React.FC = () => {
           icon={<GrFormPreviousLink />}
           value="small"
           onClick={() => {
-        prevChapter();
-        const selectElement = document.querySelector(
-          ".ant-select-selector"
-        ) as HTMLDivElement;
-        if (selectElement) {
-          selectElement.innerText = `Chap ${currentId - 1}`;
-        }
+            prevChapter();
+            const selectElement = document.querySelector(
+              ".ant-select-selector"
+            ) as HTMLDivElement;
+            if (selectElement) {
+              selectElement.innerText = `Chap ${currentId - 1}`;
+            }
           }}
           disabled={currentId === 1}
         />
@@ -91,19 +96,19 @@ const MangaChapter: React.FC = () => {
           value={`Chap ${id}`}
           style={{ width: 120 }}
           onChange={(value) => {
-        navigate(`/truyen/${path}/chap/${value}`);
-        const selectElement = document.querySelector(
-          ".ant-select-selector"
-        ) as HTMLDivElement;
-        if (selectElement) {
-          selectElement.innerText = `Chap ${value}`;
-        }
+            navigate(`/truyen/${path}/chap/${value}`);
+            const selectElement = document.querySelector(
+              ".ant-select-selector"
+            ) as HTMLDivElement;
+            if (selectElement) {
+              selectElement.innerText = `Chap ${value}`;
+            }
           }}
           options={
-        chap?.[path]?.chapters.map((chapter, index) => ({
-          value: index + 1,
-          label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
-        })) || []
+            chap?.[path]?.chapters.map((chapter, index) => ({
+              value: index + 1,
+              label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
+            })) || []
           }
         />
         <Button
@@ -112,13 +117,13 @@ const MangaChapter: React.FC = () => {
           icon={<GrFormNextLink />}
           value="small"
           onClick={() => {
-        nextChapter();
-        const selectElement = document.querySelector(
-          ".ant-select-selector"
-        ) as HTMLDivElement;
-        if (selectElement) {
-          selectElement.innerText = `Chap ${currentId + 1}`;
-        }
+            nextChapter();
+            const selectElement = document.querySelector(
+              ".ant-select-selector"
+            ) as HTMLDivElement;
+            if (selectElement) {
+              selectElement.innerText = `Chap ${currentId + 1}`;
+            }
           }}
           disabled={currentId === maxLengthChap}
         />
