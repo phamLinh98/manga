@@ -82,7 +82,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
                   className="text-blue-600 font-medium"
                   onClick={() => moveToChapterById(chap.id, path)}
                 >
-                  Chương {chap.number}: {chap.title}
+                  {chap.title}
                 </a>
                 <span className="text-sm text-gray-500">{chap.date}</span>
               </li>
