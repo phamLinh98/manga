@@ -2,7 +2,7 @@ import { Button, Spin } from "antd";
 import { FaBookOpen, FaEye } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
 import { LoadingOutlined } from '@ant-design/icons';
-import { Navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 interface StoryDetailProps {
   currentChapter: any; // bạn nên định nghĩa type rõ hơn nếu có thể
