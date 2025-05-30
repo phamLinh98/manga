@@ -77,7 +77,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
             className="divide-y divide-gray-200 rounded-xl overflow-hidden space-y-2"
             style={{ maxHeight: "150px", overflowY: "auto" }}
           >
-            {[...chapters].reverse().map((chap) => (
+            {chapters ? [...chapters].reverse().map((chap) => (
               <li
                 key={chap.id}
                 className="p-4 hover:bg-gray-50 transition flex justify-between"
@@ -90,7 +90,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
                 </a>
                 <span className="text-sm text-gray-500">{chap.date}</span>
               </li>
-            ))}
+            )): 'Truyen dang cap nhat...'}
           </ul>
         </div>
       </div>
