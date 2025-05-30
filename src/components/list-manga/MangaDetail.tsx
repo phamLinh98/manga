@@ -31,7 +31,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
   const navigate = useNavigate();
 
   const moveToChapterById = (id:any, path:any) => {
-    navigate(`/truyen/${path}/${id}`);
+    navigate(`/truyen/${path}/chap/${id}`);
   }
 
   return (

@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
         ],
       },
       {
-        path: "truyen/:path/:id",
+        path: "truyen/:path/chap/:id",
         element: <MangaChapter />,
       }
     ],
