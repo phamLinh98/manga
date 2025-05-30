@@ -34,7 +34,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
     navigate(`/truyen/${path}/chap/${id}`);
   }
 
-  const startRead = () => {
+  const startRead = (path:any) => {
     navigate(`/truyen/${path}/chap/1`);
   };
 
@@ -60,13 +60,13 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
         <p className="text-gray-800">{description}</p>
 
         <div className="flex gap-3 mt-2">
-          <Button color="purple" variant="dashed" icon={<FaBookOpen />} onClick={startRead}>
+          <Button color="purple" variant="dashed" icon={<FaBookOpen />} onClick={() => startRead(path)} disabled={chapters.length === 0}>
             Đọc từ đầu
           </Button>
-          <Button color="purple" variant="dashed" icon={<MdNavigateNext />}>
+          <Button color="purple" variant="dashed" icon={<MdNavigateNext />} disabled={chapters.length === 0}>
             Đọc tiếp
           </Button>
-          <Button color="purple" variant="dashed" icon={<FaEye />}>
+          <Button color="purple" variant="dashed" icon={<FaEye />} disabled={chapters.length === 0}>
             Theo dõi
           </Button>
         </div>
@@ -77,7 +77,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
             className="divide-y divide-gray-200 rounded-xl overflow-hidden space-y-2"
             style={{ maxHeight: "150px", overflowY: "auto" }}
           >
-            {chapters ? [...chapters].reverse().map((chap) => (
+            {chapters.length > 0 ? [...chapters].reverse().map((chap) => (
               <li
                 key={chap.id}
                 className="p-4 hover:bg-gray-50 transition flex justify-between"
@@ -90,7 +90,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
                 </a>
                 <span className="text-sm text-gray-500">{chap.date}</span>
               </li>
-            )): 'Truyen dang cap nhat...'}
+            )): 'List chap đang được cập nhật...'}
           </ul>
         </div>
       </div>
