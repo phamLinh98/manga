@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import StoryDetail from "./MangaDetail";
 import { useParams } from "react-router";
+import { envConfig } from "../../config/envConfig";
 
 export const MangaComponent: React.FC = () => {
   const [chapters, setChapters] = useState([]);
@@ -10,7 +11,7 @@ export const MangaComponent: React.FC = () => {
   useEffect(() => {
     const fetchChapters = async () => {
       try {
-        const response = await fetch("https://my.api.mockaroo.com/chapter?key=ed51a920");
+        const response = await fetch(envConfig.API_URL_CHAPTER);
         if (!response.ok) {
           throw new Error("Failed to fetch chapters");
         }

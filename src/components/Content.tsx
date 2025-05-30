@@ -4,6 +4,7 @@ import { ListComponent } from "./list-manga/List";
 import { theme } from 'antd';
 import { useEffect, useState } from "react";
 import { LoadingOutlined } from '@ant-design/icons';
+import { envConfig } from "../config/envConfig";
 
 export const ContentComponent:React.FC = () => {
   const {
@@ -15,7 +16,7 @@ export const ContentComponent:React.FC = () => {
   useEffect(() => {
     const fetchChapters = async () => {
       try {
-        const response = await fetch("https://my.api.mockaroo.com/list?key=ed51a920");
+        const response = await fetch(envConfig.API_URL_LIST);
         if (!response.ok) {
           throw new Error("Failed to fetch chapters");
         }
