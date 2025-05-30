@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { envConfig } from "../../config/envConfig";
-import { Button, Spin } from "antd";
-import { LoadingOutlined } from '@ant-design/icons';
+import { Button, Select, Spin } from "antd";
+import { DownloadOutlined, LoadingOutlined } from "@ant-design/icons";
+import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 const MangaChapter: React.FC = () => {
   const { path, id } = useParams<{ path: any; id: any }>();
@@ -13,13 +14,21 @@ const MangaChapter: React.FC = () => {
 
   const nextChapter = () => {
     navigate(`/truyen/${path}/chap/${currentId + 1}`);
-  }
+  };
 
   const prevChapter = () => {
     navigate(`/truyen/${path}/chap/${currentId - 1}`);
-  }
+  };
 
-  const [chap, setChap] = useState<Record<string, { chapters: { chapter: string[] }[] }> | null>(null);
+  const [chap, setChap] = useState<Record<
+    string,
+    {
+      chapters: {
+        title: string;
+        chapter: string[];
+      }[];
+    }
+  > | null>(null);
 
   useEffect(() => {
     const fetchChapters = async () => {
@@ -43,58 +52,120 @@ const MangaChapter: React.FC = () => {
     console.log("Done");
   } else {
     return (
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
         <Spin indicator={<LoadingOutlined style={{ fontSize: 60 }} spin />} />
       </div>
     );
   }
 
-  
   const maxLengthChap = chap?.[path]?.chapters.length;
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-10 bg-gray-800 p-4 flex justify-center items-center shadow-md">
-      <h1 className="text-lg font-semibold">Chap {id} </h1>
+        <Button
+          style={{ color: "white" }}
+          type="primary"
+          icon={<GrFormPreviousLink />}
+          value="small"
+          onClick={() => {
+        prevChapter();
+        const selectElement = document.querySelector(
+          ".ant-select-selector"
+        ) as HTMLDivElement;
+        if (selectElement) {
+          selectElement.innerText = `Chap ${currentId - 1}`;
+        }
+          }}
+          disabled={currentId === 1}
+        />
+        <Select
+          value={`Chap ${id}`}
+          style={{ width: 120 }}
+          onChange={(value) => {
+        navigate(`/truyen/${path}/chap/${value}`);
+        const selectElement = document.querySelector(
+          ".ant-select-selector"
+        ) as HTMLDivElement;
+        if (selectElement) {
+          selectElement.innerText = `Chap ${value}`;
+        }
+          }}
+          options={
+        chap?.[path]?.chapters.map((chapter, index) => ({
+          value: index + 1,
+          label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
+        })) || []
+          }
+        />
+        <Button
+          style={{ color: "white" }}
+          type="primary"
+          icon={<GrFormNextLink />}
+          value="small"
+          onClick={() => {
+        nextChapter();
+        const selectElement = document.querySelector(
+          ".ant-select-selector"
+        ) as HTMLDivElement;
+        if (selectElement) {
+          selectElement.innerText = `Chap ${currentId + 1}`;
+        }
+          }}
+          disabled={currentId === maxLengthChap}
+        />
       </header>
 
       {/* Nội dung truyện */}
       <main className="flex-1 px-2 py-4 space-y-4 flex justify-center items-center flex-col">
-      <div className="overflow-y-auto w-full flex flex-col items-center">
-        {currentChapter && currentChapter[id - 1]?.chapter ? (
-          currentChapter[id - 1].chapter.map((image: string, index: number) => (
-        <div key={index} className="rounded-lg shadow-md mb-1">
-          <img
-            src={image}
-            alt={`Chapter ${id} - Image ${index + 1}`}
-            className="mx-auto"
-            style={{ width: "100%", maxWidth: "800px", height: "auto" }}
-          />
+        <div className="overflow-y-auto w-full flex flex-col items-center">
+          {currentChapter && currentChapter[id - 1]?.chapter ? (
+            currentChapter[id - 1].chapter.map(
+              (image: string, index: number) => (
+                <div key={index} className="rounded-lg shadow-md mb-1">
+                  <img
+                    src={image}
+                    alt={`Chapter ${id} - Image ${index + 1}`}
+                    className="mx-auto"
+                    style={{ width: "100%", maxWidth: "800px", height: "auto" }}
+                  />
+                </div>
+              )
+            )
+          ) : (
+            <p>Đang tải...</p>
+          )}
         </div>
-          ))
-        ) : (
-          <p>Đang tải...</p>
-        )}
-      </div>
-      <div className="flex space-x-1" style={{ marginTop: "5px", marginBottom:"5px" }}>
-        <Button 
-        type="primary" 
-        danger 
-        disabled={currentId === 1}
-        style={{ marginRight: "5px", color: "white"}} 
-        onClick={prevChapter}>
-          Chap trước
-          </Button>
-        <Button 
-          type="primary"  
-          onClick={nextChapter} 
-          disabled={currentId === maxLengthChap}
-          style={{ color: "white" }}
+        <div
+          className="flex space-x-1"
+          style={{ marginTop: "5px", marginBottom: "5px" }}
         >
-          Chap Sau
-        </Button>
-      </div>
+          <Button
+            type="primary"
+            danger
+            disabled={currentId === 1}
+            style={{ marginRight: "5px", color: "white" }}
+            onClick={prevChapter}
+          >
+            Chap trước
+          </Button>
+          <Button
+            type="primary"
+            onClick={nextChapter}
+            disabled={currentId === maxLengthChap}
+            style={{ color: "white" }}
+          >
+            Chap Sau
+          </Button>
+        </div>
       </main>
     </div>
   );
