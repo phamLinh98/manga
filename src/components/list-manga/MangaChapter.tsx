@@ -11,6 +11,12 @@ const MangaChapter: React.FC = () => {
   const navigate = useNavigate();
 
   const currentId = parseInt(id, 10);
+  console.log('currentId', currentId);
+
+  useEffect(() => {
+    localStorage.setItem("currentId", currentId.toString());
+  }, [currentId]);
+
 
   const nextChapter = () => {
     navigate(`/truyen/${path}/chap/${currentId + 1}`);
@@ -48,7 +54,6 @@ const MangaChapter: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Scroll to the top of the page when the component mounts or id changes
     window.scrollTo(0, 0);
   }, [id]);
 
@@ -103,20 +108,22 @@ const MangaChapter: React.FC = () => {
             if (selectElement) {
               selectElement.innerText = `Chap ${value}`;
             }
-          }}
-          options={
-            chap?.[path]?.chapters.map((chapter, index) => ({
+            }}
+            options={
+            chap?.[path]?.chapters
+              .map((chapter, index) => ({
               value: index + 1,
               label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
-            })) || []
-          }
-        />
-        <Button
-          style={{ color: "white" }}
-          type="primary"
-          icon={<GrFormNextLink />}
-          value="small"
-          onClick={() => {
+              }))
+              .reverse() || []
+            }
+          />
+          <Button
+            style={{ color: "white" }}
+            type="primary"
+            icon={<GrFormNextLink />}
+            value="small"
+            onClick={() => {
             nextChapter();
             const selectElement = document.querySelector(
               ".ant-select-selector"

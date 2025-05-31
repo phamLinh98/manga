@@ -38,6 +38,12 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
     navigate(`/truyen/${path}/chap/1`);
   };
 
+  const currentId = localStorage.getItem("currentId") || 1;
+  
+  const readContinue = () => {
+    navigate(`/truyen/${path}/chap/${currentId}`);
+  }
+
   return (
     <div className="max-w-5xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6" style={{ marginTop: "5px" }}>
       <div className="md:col-span-1" style={{ paddingLeft: "5px", paddingRight: "5px", marginLeft: "5px", marginRight:"5px" }}>
@@ -63,7 +69,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
           <Button color="purple" variant="dashed" icon={<FaBookOpen />} onClick={() => startRead(path)} disabled={chapters.length === 0}>
             Đọc từ đầu
           </Button>
-          <Button color="purple" variant="dashed" icon={<MdNavigateNext />} disabled={chapters.length === 0}>
+          <Button color="purple" variant="dashed" icon={<MdNavigateNext />} onClick={readContinue} disabled={chapters.length === 0}>
             Đọc tiếp
           </Button>
           <Button color="purple" variant="dashed" icon={<FaEye />} disabled={chapters.length === 0}>
@@ -86,7 +92,7 @@ const StoryDetail: React.FC<StoryDetailProps> = ({ currentChapter }) => {
                   className="text-blue-600 font-medium"
                   onClick={() => moveToChapterById(chap.id, path)}
                 >
-                  {chap.title}
+                  Chap {chap.number}: {chap.title}
                 </a>
                 <span className="text-sm text-gray-500">{chap.date}</span>
               </li>
