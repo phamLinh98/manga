@@ -11,7 +11,6 @@ const MangaChapter: React.FC = () => {
   const navigate = useNavigate();
 
   const currentId = parseInt(id, 10);
-  console.log('currentId', currentId);
 
   useEffect(() => {
     localStorage.setItem("currentId", currentId.toString());
@@ -46,7 +45,7 @@ const MangaChapter: React.FC = () => {
         const data = await response.json();
         setChap(data);
       } catch (err: any) {
-        console.error(`Error fetching chapters: ${err.message}`);
+        throw new Error(`Error fetching chapters: ${err.message}`);
       }
     };
 
@@ -59,7 +58,7 @@ const MangaChapter: React.FC = () => {
 
   const currentChapter = chap?.[path]?.chapters || [];
   if (currentChapter.length > 0) {
-    console.log("Done");
+    console.log("Đã cập nhật");
   } else {
     return (
       <div
