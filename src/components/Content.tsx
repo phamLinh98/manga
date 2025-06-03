@@ -23,7 +23,7 @@ export const ContentComponent:React.FC = () => {
         const data = await response.json();
         setList(data);
       } catch (err: any) {
-        throw new Error(`Error fetching chapters: ${err.message}`);
+        console.log('Lỗi khi lấy danh sách truyện');
       }
     };
 

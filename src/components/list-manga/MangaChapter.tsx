@@ -79,7 +79,7 @@ const MangaChapter: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-gray-800 p-4 flex justify-center items-center shadow-md">
+      {/* <header className="sticky top-0 z-10 bg-gray-800 p-4 flex justify-center items-center shadow-md">
         <Button
           style={{ color: "white" }}
           type="primary"
@@ -133,7 +133,7 @@ const MangaChapter: React.FC = () => {
           }}
           disabled={currentId === maxLengthChap}
         />
-      </header>
+      </header> */}
 
       {/* Nội dung truyện */}
       <main className="flex-1 px-2 py-4 space-y-4 flex justify-center items-center flex-col">
@@ -168,11 +168,32 @@ const MangaChapter: React.FC = () => {
           >
             Chap trước
           </Button>
+          <Select
+          value={`Chap ${id}`}
+          style={{ width: 120 }}
+          onChange={(value) => {
+            navigate(`/truyen/${path}/chap/${value}`);
+            const selectElement = document.querySelector(
+              ".ant-select-selector"
+            ) as HTMLDivElement;
+            if (selectElement) {
+              selectElement.innerText = `Chap ${value}`;
+            }
+            }}
+            options={
+            chap?.[path]?.chapters
+              .map((chapter, index) => ({
+              value: index + 1,
+              label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
+              }))
+              .reverse() || []
+            }
+          />
           <Button
             type="primary"
             onClick={nextChapter}
             disabled={currentId === maxLengthChap}
-            style={{ color: "white" }}
+            style={{ marginLeft: "5px", color: "white" }}
           >
             Chap Sau
           </Button>
