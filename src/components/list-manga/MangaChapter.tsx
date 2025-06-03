@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router";
 import { envConfig } from "../../config/envConfig";
 import { Button, Select, Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 const MangaChapter: React.FC = () => {
   const { path, id } = useParams<{ path: any; id: any }>();
@@ -16,7 +15,6 @@ const MangaChapter: React.FC = () => {
     localStorage.setItem("currentId", currentId.toString());
   }, [currentId]);
 
-
   const nextChapter = () => {
     navigate(`/truyen/${path}/chap/${currentId + 1}`);
   };
@@ -28,8 +26,9 @@ const MangaChapter: React.FC = () => {
   const [chap, setChap] = useState<Record<
     string,
     {
+      title: string;
       chapters: {
-        title: string;
+        title: any;
         chapter: string[];
       }[];
     }
@@ -78,65 +77,10 @@ const MangaChapter: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
-      {/* Header */}
-      {/* <header className="sticky top-0 z-10 bg-gray-800 p-4 flex justify-center items-center shadow-md">
-        <Button
-          style={{ color: "white" }}
-          type="primary"
-          icon={<GrFormPreviousLink />}
-          value="small"
-          onClick={() => {
-            prevChapter();
-            const selectElement = document.querySelector(
-              ".ant-select-selector"
-            ) as HTMLDivElement;
-            if (selectElement) {
-              selectElement.innerText = `Chap ${currentId - 1}`;
-            }
-          }}
-          disabled={currentId === 1}
-        />
-        <Select
-          value={`Chap ${id}`}
-          style={{ width: 120 }}
-          onChange={(value) => {
-            navigate(`/truyen/${path}/chap/${value}`);
-            const selectElement = document.querySelector(
-              ".ant-select-selector"
-            ) as HTMLDivElement;
-            if (selectElement) {
-              selectElement.innerText = `Chap ${value}`;
-            }
-            }}
-            options={
-            chap?.[path]?.chapters
-              .map((chapter, index) => ({
-              value: index + 1,
-              label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
-              }))
-              .reverse() || []
-            }
-          />
-          <Button
-            style={{ color: "white" }}
-            type="primary"
-            icon={<GrFormNextLink />}
-            value="small"
-            onClick={() => {
-            nextChapter();
-            const selectElement = document.querySelector(
-              ".ant-select-selector"
-            ) as HTMLDivElement;
-            if (selectElement) {
-              selectElement.innerText = `Chap ${currentId + 1}`;
-            }
-          }}
-          disabled={currentId === maxLengthChap}
-        />
-      </header> */}
-
-      {/* Nội dung truyện */}
       <main className="flex-1 px-2 py-4 space-y-4 flex justify-center items-center flex-col">
+        <h1 className="text-2xl font-bold mb-4 text-center">
+          {chap?.[path]?.title} - chap {currentId}
+        </h1>
         <div className="overflow-y-auto w-full flex flex-col items-center">
           {currentChapter && currentChapter[id - 1]?.chapter ? (
             currentChapter[id - 1].chapter.map(
@@ -148,6 +92,9 @@ const MangaChapter: React.FC = () => {
                     className="mx-auto"
                     style={{ width: "100%", maxWidth: "800px", height: "auto" }}
                   />
+                  <h1 className="text-2xl font-bold mb-4 text-center">
+                  {chap?.[path]?.title} - chap {currentId}
+                  </h1>
                 </div>
               )
             )
@@ -169,24 +116,24 @@ const MangaChapter: React.FC = () => {
             Chap trước
           </Button>
           <Select
-          value={`Chap ${id}`}
-          style={{ width: 120 }}
-          onChange={(value) => {
-            navigate(`/truyen/${path}/chap/${value}`);
-            const selectElement = document.querySelector(
-              ".ant-select-selector"
-            ) as HTMLDivElement;
-            if (selectElement) {
-              selectElement.innerText = `Chap ${value}`;
-            }
+            value={`Chap ${id}`}
+            style={{ width: 120 }}
+            onChange={(value) => {
+              navigate(`/truyen/${path}/chap/${value}`);
+              const selectElement = document.querySelector(
+                ".ant-select-selector"
+              ) as HTMLDivElement;
+              if (selectElement) {
+                selectElement.innerText = `Chap ${value}`;
+              }
             }}
             options={
-            chap?.[path]?.chapters
-              .map((chapter, index) => ({
-              value: index + 1,
-              label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
-              }))
-              .reverse() || []
+              chap?.[path]?.chapters
+                .map((chapter, index) => ({
+                  value: index + 1,
+                  label: `Chap ${index + 1}: ${chapter.title || "No Title"}`,
+                }))
+                .reverse() || []
             }
           />
           <Button
