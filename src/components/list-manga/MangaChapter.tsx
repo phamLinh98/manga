@@ -116,16 +116,10 @@ const MangaChapter: React.FC = () => {
             Chap trước
           </Button>
           <Select
-            value={`Chap ${id}`}
+            value={`Chap ${currentId}`}
             style={{ width: 120 }}
             onChange={(value) => {
               navigate(`/truyen/${path}/chap/${value}`);
-              const selectElement = document.querySelector(
-                ".ant-select-selector"
-              ) as HTMLDivElement;
-              if (selectElement) {
-                selectElement.innerText = `Chap ${value}`;
-              }
             }}
             options={
               chap?.[path]?.chapters
